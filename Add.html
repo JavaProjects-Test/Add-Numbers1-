@@ -1,0 +1,26 @@
+<html ng-app="firstApp">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+<div ng-controller="calculator">
+<p>
+<input type="number" placeholder="First Number" ng-model="num1"/><br>
+<input type="number" placeholder="Second Number" ng-model="num2"/><br>
+</p>
+
+<p><button ng-click="add()">Add</button></p>
+
+
+</div>
+<script>
+var app=angular.module('firstApp',[]);
+app.controller('calculator',function($scope){
+$scope.num1="";
+$scope.num2="";
+$scope.add=function(){parseInt($scope.num1)+parseInt($scope.num2);};
+}
+);
+</script>
+</body>
+</html>
